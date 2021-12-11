@@ -2,9 +2,9 @@ name: Build
 on: [push]
 jobs:
   Build:
-    permissions: read-all
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Build page
         uses: actions-rs/install@v0.1
         with: 
