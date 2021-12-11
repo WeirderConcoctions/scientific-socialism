@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dialectical Materialism - Scientific Socialism</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="alienation.html"><strong aria-hidden="true">2.</strong> Alienation</a></li><li class="chapter-item expanded "><a href="dialectical-materialism.html" class="active"><strong aria-hidden="true">3.</strong> Dialectical Materialism</a></li><li class="chapter-item expanded "><a href="responses.html"><strong aria-hidden="true">4.</strong> Responses</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Scientific Socialism</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="terminology"><a class="header" href="#terminology">Terminology</a></h2>
+<h3 id="dialectics"><a class="header" href="#dialectics">Dialectics</a></h3>
+<ol>
+<li>Dialectics refers to discussion and debate which leads to the formation of a synthesis.</li>
+<li>Dialectics is the method of reasoning which aims to understand things concretely in all their development, movement and interconnection, with their opposite and contradictory sides in unity.</li>
+<li>Procedure: A thesis is proposed. An antithesis argues it. As flaws in both arguments are clear, a common idea is formed, called the synthesis. Each synthesis is a thesis, too, and may have another antithesis. 
+<ol>
+<li>This is often credited to Hegel, and is thus called Hegelian Dialectics.</li>
+<li>However, this is not the entirety of dialectics, and is only an oversimplified version of events. </li>
+<li>Often, a synthesis cannot be reached because despite materialism stating that a synthesis always does exist, the human mind has not given it thought, ie, cannot think of it subjectively.</li>
+</ol>
+</li>
+<li>Dialectics continue until a final, unchanged synthesis is reached. But it is very unlikely that any synthesis can reach such a state, for human nature and ego prevents it.</li>
+<li>A thesis and antithesis are always in both unity and contradiction of each other. Read Engel's Laws of Dialectics below for an example.</li>
+</ol>
+<h3 id="idealistic-materialism"><a class="header" href="#idealistic-materialism">Idealistic Materialism:</a></h3>
+<p>Materialism is human perception of reality, matter, and thought.</p>
+<ol>
+<li>As stated earlier, since a thesis and antithesis are always in a unity of opposition, the distinguishing mark between idealistic materialism and philosophical materialism emerges. 
+<ol>
+<li>
+<p>Idealistic materialism refers to simple, conversation ideas, in which forming a synthesis is faster and easier. Every possible kind of matter and thought exists. Everything exists regardless of human perception. They have existed, will exist, and will continue to exist, even if we cannot perceive them subjectively. This concept was developed by Hegels, but not discovered/invented by him.</p>
+</li>
+<li>
+<p>Philosophical materialism refers to the realm of political economies, class contradictions, and political ideas, in which human ego and selfishness play a much bigger role, for they restrict the creation of a synthesis for their own needs. Everything stems from the mind, and potentially, all that exists is a single mind, with everything outside of it being a mere illusion.</p>
+<blockquote>
+<p>Marx explains &quot;It is not the consciousness of a human that determines their being, but, on the contrary, their social being that determines their consciousness.&quot;</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li>Modern science relies on Materialism for the start of all its research, for it allows for either:
+<ol>
+<li>The mind of a scientist to perceive a concept before discovering it.</li>
+<li>The scientist looking for what has not been discovered, before perceiving it. </li>
+</ol>
+</li>
+</ol>
+<h1 id="dialectal-materialism"><a class="header" href="#dialectal-materialism">Dialectal Materialism</a></h1>
+<ol>
+<li>Marxists view all reality as interconnected and constantly changing.</li>
+<li>Darwin's Theory on the Evolution of Organisms illustrates such interconnected and constantly changing reality.</li>
+<li>It is only through the study of dialectics that the mind will stop being bound by the restrictions of metaphysical rigidity, and understand the perpetual, fluid motion of reality.</li>
+</ol>
+<blockquote>
+<p>Dialectics in the proper sense is the study of the contradiction in the very essence of objects [reality]
+~ Vladmir Lenin</p>
+</blockquote>
+<ol start="4">
+<li>Engels layed out three essential rules to Dialectics:</li>
+</ol>
+<h2 id="the-unity-and-struggle-of-opposites"><a class="header" href="#the-unity-and-struggle-of-opposites"><strong>The Unity and Struggle of Opposites:</strong></a></h2>
+<p>The Unity of Opposites exists in all objects from beginning to end, if such a time be. </p>
+<ol>
+<li><em>Example: there could be no exploiter without the exploited. Though both having opposing ideas, and thus become a thesis and antithesis, one could not exist without the other, which means that they can only exist in unity- a unity of opposites.</em></li>
+</ol>
+<blockquote>
+<p>&quot;The splitting of a single whole and cognition of its contradictory parts is the essence of dialectics. This aspect of dialectics usually receives inadequate attention: the identity of opposites is taken as the sum-total of examples and not as a law of cognition.&quot;
+~ Vladmir Lenin
+&quot;The unity (coincidence, identity, equal action) of opposites is conditional, temporary, transitory, relative. The struggle of mutually exclusive opposites is absolute, just as development and motion are absolute.&quot;
+~ Vladmir Lenin</p>
+</blockquote>
+<ol start="2">
+<li>The constant struggle between the opposites, caused by their unity, pushes them into eternal motion. </li>
+<li>It is also called the Law of Contradiction.</li>
+</ol>
+<h2 id="the-transformation-from-quantity-into-quality-quantitative-changes-always-lead-to-qualitative-changes"><a class="header" href="#the-transformation-from-quantity-into-quality-quantitative-changes-always-lead-to-qualitative-changes">The Transformation from Quantity into Quality:** Quantitative changes always lead to Qualitative changes.</a></h2>
+<ol>
+<li>Quantitative change is considered to be gradual change.</li>
+<li>Qualitative change is considered to be revolutionary change.</li>
+<li>After a certain level of gradual change through increase or decrease, a qualitative leap occurs which fundamentally changes the way</li>
+<li>For example, after gradual heating of water, at a certain temperature, it will evaporate. The temperature change is a quantitative change, while the evaporation is qualitative change.</li>
+</ol>
+<h2 id="the-negation-of-the-negation-this-law-states-that-every-old-thing-is-superceded-by-a-new-thing"><a class="header" href="#the-negation-of-the-negation-this-law-states-that-every-old-thing-is-superceded-by-a-new-thing">The Negation of the Negation:** This law states that every old thing is superceded by a new thing.</a></h2>
+<ol>
+<li>For example, in the previous example. When the water starts to heat up, the cold water becomes hot water. This is a negation. The evaporation of the water is a second negation. Some time after, the vapour will condense, and yet another negation occurs.</li>
+<li>Thus, it can be said that every negation gets negated, by a newer negation. The cycle runs eternally and thus the universe moves.</li>
+<li>Negation in Marxism does not represent complete wiping out of the previous one. For example, when feudalism became prominent, slavery continued to be, and when capitalism became dominated, remanants of feudalism still remained.</li>
+<li>In short, Dialectal Materialism is the understanding of reality, in the form of thoughts, emotions, or material objects, in their continuous gradual change, due to contradictions within a process, which is pushed forward by the unity of opposites within that process, leading to the negation of the old negation, causing a revolutionary, qualitative change.</li>
+<li>It is proof that history is not moved by visionary men and their ideals, but instead, the struggle between people and reality.
+<blockquote>
+<p>“History is not like some individual person, which uses men to achieve its ends. History is nothing but the actions of men in pursuit of their ends.”
+~ Karl Marx</p>
+</blockquote>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="alienation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="responses.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="alienation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="responses.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
