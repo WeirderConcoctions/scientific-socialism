@@ -11,6 +11,6 @@ jobs:
         with: 
           crate: mdbook
           version: latest
-        run: mdbook build
+      - run: mdbook build
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
