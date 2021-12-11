@@ -13,3 +13,5 @@ The Unity of Opposites is related to, but not the same as the Law of Contradicti
     4. Through this change, the principal and non-principal aspect switch sides. 
 7. Mao, in 'On Contradiction', states that the Unity of Opposites is temporary, for it is a standstill, a stalemate, a harmony between the two opposing forces. For example, in a capitalist country, the Unity of Opposites could only exist if there is only weak or negligible  revolution and counter-revolution.
 8. The moment quantitative changes within the struggle create a qualitative change, the unity of opposites is destroyed. Thus, the struggle is permanent and absolute, while the Unity of Opposites is temporary and conditional.
+
+- [Contradiction](./contradiction.md)
