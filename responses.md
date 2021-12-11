@@ -1,4 +1,4 @@
-# Responses to Arguments against Communism
+# Responses to Common Arguments against Communism
 Note that even where the word 'communism' is used, it is not referring to a true communist state, but a socialist state. Communism is a stateless society, a form of society which has never been achieved in human history, except for in the form of primitive communism. 
 ## Communism has caused 100 million deaths
 1. Colonialism, though started by feudal lords, continued under capitalism and thus is also capitalist endeavour. Capitalists, in their desire to acquire more power and profit, exploit the resources and people of a country. Colonisation only picked up steam, and in that sense, it marks the birth of capitalism.
