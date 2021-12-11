@@ -1,0 +1,16 @@
+name: Build
+on: [push]
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Build page
+        uses: actions-rs/install@v0.1
+        with: 
+          crate: mdbook
+          version: latest
+        run: mdbook build
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
