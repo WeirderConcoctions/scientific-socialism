@@ -1,8 +1,8 @@
 # Summary
 - [Introduction to this Repository](../README.md)
 # Marxism
-- [Alienation of the Worker](./alienation.md)
+- [Alienation](./alienation.md)
   - [Commodity Fetishism](./fetishism.md)
-- [Dialectical Materialism](./dialectical-materialism.md)
-  - [Contradiction](./contradiction.md)
-  - [Responses](./responses.md)
+- [Dialectical and Historical Materialism](./dialectical-materialism.md)
+  - [Contradictions and the Unity of Opposites](./contradiction.md)
+- [Responses to Common Arguments against Communism](./responses.md)
