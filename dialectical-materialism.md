@@ -1,4 +1,4 @@
-## Introduction
+## Terminology
 ### Dialectics
 
 1. Dialectics refers to discussion and debate which leads to the formation of a synthesis.
