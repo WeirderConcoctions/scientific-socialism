@@ -5,4 +5,4 @@
   - [Commodity Fetishism](./fetishism.md)
 - [Dialectical Materialism](./dialectical-materialism.md)
   - [Contradiction](./contradiction.md)
-  - - [Responses](./responses.md)
+  - [Responses](./responses.md)
