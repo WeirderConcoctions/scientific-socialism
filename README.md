@@ -1,5 +1,5 @@
 # Scientific Socialism
-This repositary is a collection of my writings and understanding of Scientific Socialist Concepts for public viewing. These writings include:
+This repository is a collection of my writings and understanding of Scientific Socialist Concepts for public viewing. These writings include:
 1. Responses to arguments against, or defence of communism. 
 2. Interpretations of Communist Theory from a purely Marxist-Leninist-Maoist perspective. This includes Dialectical Materialism, Alienation, Commodity Fetishism, Reification, Stages of Historical Development, etc.
 4. Civil Liberties under various stages of Human History- Primitive Communism, Slave Society, Feudalism, Capitalism, Socialism and Communism.
