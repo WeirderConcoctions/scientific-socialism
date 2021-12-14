@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Literature - Scientific Socialism</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introduction</li><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction to this Repository</a></li><li class="chapter-item expanded "><a href="literature.html" class="active"><strong aria-hidden="true">2.</strong> Literature</a></li><li class="chapter-item expanded affix "><li class="part-title">The Capitalist Crisis</li><li class="chapter-item expanded affix "><li class="part-title">Marxism</li><li class="chapter-item expanded "><a href="alienation.html"><strong aria-hidden="true">3.</strong> Alienation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="fetishism.html"><strong aria-hidden="true">3.1.</strong> Commodity Fetishism</a></li></ol></li><li class="chapter-item expanded "><a href="dialectical-materialism.html"><strong aria-hidden="true">4.</strong> Dialectical and Historical Materialism</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="contradiction.html"><strong aria-hidden="true">4.1.</strong> Contradictions and the Unity of Opposites</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Leninism</li><li class="chapter-item expanded "><a href="leninparty.html"><strong aria-hidden="true">5.</strong> How to build a Revolutionary Party</a></li><li class="chapter-item expanded affix "><li class="part-title">Feminism, LGBTQ+, People of Colour, and other Oppressed Groups</li><li class="chapter-item expanded "><a href="fundamentalism.html"><strong aria-hidden="true">6.</strong> The Links between Fundamentalism, Misogyny, and Capitalism</a></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="responses.html"><strong aria-hidden="true">7.</strong> Responses to Common Arguments against Communism</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Scientific Socialism</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="literature"><a class="header" href="#literature">Literature</a></h1>
+<h2 id="introduction-to-marxism-leninism"><a class="header" href="#introduction-to-marxism-leninism"><strong>Introduction to Marxism-Leninism:</strong></a></h2>
+<ol>
+<li><a href="https://foreignlanguages.press/wp-content/uploads/2020/08/S01-MLM-Basic-Course-Revised-Edition-10th-Printing.pdf">Foreign Language Press- Marxism-Leninism-Maoism: Basic Course Revised Edition</a></li>
+<li><a href="https://www.marxists.org/history/usa/pubs/lrlibrary/03-LRL-princip-of-comm.pdf">Friedrich Engels (1847) - Principles of Communism.</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/Manifesto.pdf">Karl Marx &amp; Friedrich Engels (1848) - Manifesto of the Communist Party.</a></li>
+<li><a href="https://www.marxists.org/archive/lenin/works/1913/mar/x01.htm">Vladimir Lenin (1913) - Three Sources and Three Constituent Parts of Marxism.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/stalin/works/1924/foundations-leninism/introduction.htm">Iosif Stalin (1924) - The foundations of Leninism.</a></li>
+<li><a href="https://www.marxists.org/archive/lenin/works/1914/granat/index.htm">Vladimir Lenin (1914) - Karl Marx.</a></li>
+</ol>
+<h2 id="deepening-and-developing-the-above"><a class="header" href="#deepening-and-developing-the-above"><strong>Deepening and Developing the Above:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/marx/works/download/Engels_Socialism_Utopian_and_Scientific.pdf">Friedrich Engels (1875-1876) - From Utopian Socialism to Scientific Socialism.</a></li>
+<li><a href="https://www.marxists.org/archive/lenin/works/download/what-itd.pdf">Vladimir Lenin (1902) - What is to be done?</a></li>
+<li><a href="https://www.marxists.org/ebooks/lenin/state-and-revolution.pdf">Vladimir Lenin (1917) - The State and the Revolution.</a></li>
+<li><a href="https://www.marxists.org/archive/lenin/works/1916/imp-hsc/imperialism.pdf">Vladimir Lenin (1917) - Imperialism, the Highest Stage of Capitalism.</a></li>
+</ol>
+<h2 id="marxism-and-emancipation-of-women"><a class="header" href="#marxism-and-emancipation-of-women"><strong>Marxism and Emancipation of Women:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/origin_family.pdf">Friedrich Engels (1884) - The Origin of the Family, Private Property and the State.</a></li>
+<li><a href="https://www.marxists.org/archive/bebel/1879/woman-socialism/index.htm">August Bebel (1879) - Women and Socialism.</a></li>
+<li><a href="https://www.marxists.org/archive/kollonta/1920/communism-family.htm">Aleksándra Kollontai (1918) - Communism and the Family.</a></li>
+<li><a href="https://www.marxists.org/archive/kollonta/1921/prostitution.htm">Aleksándra Kollontai (1921) - Prostitution and how to Combat it.</a></li>
+<li><a href="https://www.marxists.org/archive/eleanor-marx/works/womanq.htm">Eleanor Marx (1886) - The woman question.</a></li>
+<li><a href="https://www.marxists.org/archive/zetkin/1896/10/women.htm">Clara Zetkin (1896) - Only with the Proletarian Woman will Socialism Triumph.</a></li>
+<li><a href="https://www.marxists.org/archive/gandhy/2006/philosophical-trends-in-feminist-movement-2nd-printing.pdf">Anuradha Ghandy (2006) - Philosophical trends in the Feminist Movement.</a></li>
+<li><a href="https://files.catbox.moe/29ov2r.pdf">Anuradha Ghandy (2001) - Selected Works on Feminism, Caste, and Tribal Issues in India</a></li>
+</ol>
+<h2 id="materialism-and-idealism"><a class="header" href="#materialism-and-idealism"><strong>Materialism and Idealism:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/Economic-Philosophic-Manuscripts-1844.pdf">Karl Marx (1884) - Economic and Philosophical Manuscripts: First manuscript, Second manuscript, Third manuscript.</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/1845/theses/index.htm">Karl Marx (1845) - Theses on Feuerbach.</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/condition-working-class-england.pdf">Friedrich Engels (1845) - The Situation of the Working Class in England.</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/Poverty-Philosophy.pdf">Karl Marx (1847) - Misery of Philosophy.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/mao/selected-works/volume-1/mswv1_16.htm">Mao Tse Tsung (1937) - On Practice</a></li>
+<li><a href="https://www.marxists.org/reference/archive/mao/selected-works/volume-1/mswv1_17.htm">Mao Tse Tsung (1937) - On Contradiction</a></li>
+</ol>
+<h2 id="critique-of-political-economy"><a class="header" href="#critique-of-political-economy"><strong>Critique of Political Economy:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/wage-labour-capital.pdf">Karl Marx (1849) - Wage, Labour and Capital.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/smith-cyril/works/articles/engels.htm">Friedrich Engels (1843) - Notes for a Critique of Political Economy-</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/value-price-profit.pdf">Karl Marx (1865) - Wages, Price and Profit.</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/download/pdf/Capital-Volume-I.pdf">Karl Marx (1867) - Capital: Book one: The Process of Production of Capital.</a></li>
+</ol>
+<h2 id="the-ideological-battle"><a class="header" href="#the-ideological-battle"><strong>The Ideological Battle:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/lenin/works/1918/prrk/">Vladimir Lenin (1919) - The Proletarian Revolution and the Renegade Kautsky.</a></li>
+<li><a href="https://www.marxists.org/archive/luxemburg/1900/reform-revolution/">Rosa Luxemburg (1899) - Reform or Revolution.</a></li>
+<li><a href="https://www.marxists.org/archive/marx/works/1872/10/authority.htm">Friedrich Engels (1873) - Of Authority.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/stalin/works/1924/11_19.htm">Iosif Stalin (1924) - Trotskyism or Leninism?</a></li>
+</ol>
+<h2 id="fascism"><a class="header" href="#fascism"><strong>Fascism:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/zetkin/1923/06/struggle-against-fascism.html">Clara Zetkin (1923) - Fascism.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/dimitrov/works/1935/08_02.htm">Georgy Dimitrov (1935) - The Fascist Offensive and the Tasks of the Communist International in the Struggle of the Working Class against Fascism</a></li>
+<li><a href="https://www.marxists.org/reference/archive/dimitrov/works/1937/war.htm">Georgy Dimitrov (1937) - Fascism is War.</a></li>
+</ol>
+<h2 id="the-national-question"><a class="header" href="#the-national-question"><strong>The National Question:</strong></a></h2>
+<ol>
+<li><a href="https://www.marxists.org/archive/lenin/works/1913/crnq/index.htm">Vladimir Lenin (1913) - Critical notes on the National Question. In collected works, vol XX, pp. 173-190.</a></li>
+<li><a href="https://www.marxists.org/reference/archive/stalin/works/1913/03.htm">Iosif Stalin (1913) - Marxism and the National Question.</a></li>
+<li><a href="https://www.marxists.org/archive/lenin/works/1914/self-det/">Vladimir Lenin (1914) - The Right of Nations to Self-Determination.</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="alienation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="alienation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
